@@ -1,13 +1,23 @@
 import Card from './Card.jsx';
+import { motion } from "framer-motion";
+
 
 function Services() {
     return (
 
-      <section className="flex flex-col h-screen gap-40 items-center justify-center w-screen overflow-hidden">
+      <section className="flex flex-col snap-start h-screen gap-40 items-center justify-center w-screen overflow-hidden">
+        <motion.div
+        initial={{ opacity: 0, y: 200, scale: 0.8 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 }  }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        viewport={{ once: true }}
+      >
+        
+      
 
-        <h2 className="text-6xl">My Services</h2>
+        <h2 className="text-6xl font-bold text-white text-center">My Services</h2>
 
-        <div className="flex flex-row gap-10 w-full p-5">
+        <div className="flex flex-row w-full p-5 items-center gap-10">
 
             <Card type="Web Development" desc="Creating responsive and modern websites using the latest technologies." />
             <Card type="UI/UX Design" desc="Designing user-friendly interfaces and experiences that enhance user satisfaction." />
@@ -18,7 +28,7 @@ function Services() {
             
 
             
-
+        </motion.div>
         </section>
         
     );

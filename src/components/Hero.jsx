@@ -2,8 +2,8 @@
 
 function Hero() {
     return (
-        <section className="flex flex-row h-[90%] w-screen overflow-hidden">
-
+        <section className="flex flex-row snap-start h-[90%] w-screen overflow-hidden">
+            
         <div className="flex flex-col items-center justify-center h-[90%] w-[50%]">
             
 
