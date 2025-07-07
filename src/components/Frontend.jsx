@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import SkillsCard from './SkillsCard';
 import reactSvg from '../assets/react.svg';
 import javascriptSvg from '../assets/javascript-svgrepo-com.svg';
@@ -10,48 +10,55 @@ import figmaSvg from '../assets/figma-svgrepo-com.svg';
 
 export default function Backend() {
     const skills = [
-        {
-            type: 'React',
-            status: 'Intermediate',
-            desc: 'Building dynamic user interfaces with React.',
-            img: reactSvg,
-        },
-        {
-            type: 'JavaScript',
-            status: 'Advanced',
-            desc: 'Creating interactive web applications with Vue.js.',
-            img: javascriptSvg,
-        },
-        {
-            type: 'HTML',
-            status: 'Beginner',
-            desc: 'Developing single-page applications using Angular.',
-            img: html,
-        },
-        {
-            type: 'Tailwind CSS',
-            status: 'Intermediate',
-            desc: 'Building fast and reactive web apps with Svelte.',
-            img: tailwindcssSvg,
-        },
-        {
-            type: 'Astro',
-            status: 'Advanced',
-            desc: 'My favorite static site generator for building fast websites.',
-            img: astroSvg,
-        },
-        {
-            type: 'Figma',
-            status: 'Advanced',
-            desc: 'I use this tool to design and prototype user interfaces before coding.',
-            img: figmaSvg,
-        },
-    ];
+    {
+        type: 'React',
+        status: 'Intermediate',
+        desc: 'One of the best and simple JavaScript libraries for building dynamic user interfaces. His syntax is way understandable.',
+        img: reactSvg,
+        color: '#61DBFB', // Azul React
+    },
+    {
+        type: 'JavaScript',
+        status: 'Advanced',
+        desc: 'JavaScript means the beggining of an interactive web application. Suitable for those frameworks that have dynamic user interfaces.',
+        img: javascriptSvg,
+        color: '#f7df1e', // Amarillo JS
+    },
+    {
+        type: 'HTML',
+        status: 'Expert',
+        desc: 'A hypertext markup language for creating web pages. It is the backbone of any web application. I do use semantic practices to ensure accessibility and SEO.',
+        img: html,
+        color: '#e34c26',
+    },
+    {
+        type: 'Tailwind CSS',
+        status: 'Advanced',
+        desc: 'Tailwind CSS is an useful framework that allows me to create an unique UI/UX with inline-shorten CSS. Ideal for making custom designs.',
+        img: tailwindcssSvg,
+        color: '#38bdf8',
+    },
+    {
+        type: 'Astro',
+        status: 'Advanced',
+        desc: 'My favorite static site generator for building fast websites. Way similar to React, but with a focus on performance and static site generation.',
+        img: astroSvg,
+        color: '#ff5d01',
+    },
+    {
+        type: 'Figma',
+        status: 'Intermediate',
+        desc: 'I use this tool to design and prototype user interfaces before coding. It sounds familiar to me due to Autolayout, which has the same concept as flexbox',
+        img: figmaSvg,
+        color: '#a259ff',
+    },
+];
+
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <section className="relative snap-start w-full h-screen overflow-hidden">
+        <section className="relative flex flex-col items-center justify-center snap-start w-full h-screen overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 300, x: 500 }}
                 whileInView={{ opacity: 1, y: 0, x: 0 }}
@@ -63,7 +70,7 @@ export default function Backend() {
                     Frameworks: <u>Frontend</u>
                 </h2>
 
-                <div className="flex justify-center p-5 items-center gap-20 mt-32 z-10 relative flex-wrap">
+                <div className="flex justify-center p-5 items-center gap-20 mt-20 z-10 relative flex-wrap">
                     {skills.map((skill, index) => (
                         <motion.img
                             key={index}
@@ -87,11 +94,12 @@ export default function Backend() {
                     ))}
                 </div>
 
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 pointer-events-none p-5 z-20">
+                <div className="absolute top-10/12 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 pointer-events-none p-5 z-20">
                     {hoveredIndex !== null && (
                         <SkillsCard
                             type={skills[hoveredIndex].type}
                             status={skills[hoveredIndex].status}
+                            color={skills[hoveredIndex].color}  
                             desc={skills[hoveredIndex].desc}
                         />
                     )}

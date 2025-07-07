@@ -1,13 +1,12 @@
+import './global.css';
 
-
-function Card(card) {
+export default function Card(card) {
     return (
-            <div className="flex flex-col w-md h-96 border-4 border-white p-8 mt-20 rounded-lg">
-            <h3 className="text-3xl font-bold text-white mb-4">{card.type}</h3>
-            <p className="text-lg max-w-[75ch] mb-5">{card.desc}</p>
+        <div className="relative w-fit">
+            <div className="card-border-animation flex flex-col bg-gray-800 p-4 rounded-xl shadow-lg w-2xs h-44 justify-around">
+                <h3 className="text-2xl font-semibold text-white">{card.type}</h3>
+                <p className="text-md text-gray-300">{card.desc}</p>
             </div>
-
-        
+        </div>
     );
 }
-export default Card;
