@@ -1,6 +1,12 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import Avatar from '../assets/peeps-avatar-alpha.png';
+import { AnimatePresence } from "framer-motion";
 
 function Hero() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { amount: 0.5 });
+
     const containerVariants = {
         hidden: { scale: 10, opacity: 0 },
         visible: {
@@ -22,7 +28,8 @@ function Hero() {
 
     return (
         <motion.section
-            className="flex flex-row snap-start h-[90%] w-screen overflow-hidden"
+            ref={ref}
+            className="flex flex-row snap-start h-[90%] w-screen overflow-hidden justify-center items-center p-10"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -32,7 +39,7 @@ function Hero() {
                 variants={childVariants}
             >
                 <motion.div
-                    className="flex flex-col gap-5 border-4 border-white p-8 mt-32 rounded-lg"
+                    className="flex flex-col gap-5 p-8 mt-32 rounded-lg"
                     variants={childVariants}
                 >
                     <motion.p className="text-lg font-semibold" variants={childVariants}>
@@ -63,10 +70,24 @@ function Hero() {
                 variants={childVariants}
             >
                 <motion.div
-                    className="border-4 border-white p-8 mt-20 rounded-lg"
+                    className="p-8 m-20 rounded-lg"
                     variants={childVariants}
                 >
-                    <p className="text-lg">Welcome to my portfolio!</p>
+                    <p className="text-lg">
+                        <AnimatePresence>
+                            {isInView && (
+                                <motion.img 
+                                    src={Avatar} 
+                                    alt="Avatar" 
+                                    className="absolute bottom-0 right-10 z-0"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.2 }}
+                                />
+                            )}
+                        </AnimatePresence>
+                    </p>
                 </motion.div>
             </motion.div>
         </motion.section>

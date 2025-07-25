@@ -15,7 +15,7 @@ function Navbar(navbarProps) {
 
     return (
         <motion.nav
-            className="fixed bg-gradient-to-r from-[#172444] to-[#2d3f58] w-screen h-32 p-8 flex justify-between items-center border-b-4 border-transparent"
+            className="fixed bg-black w-screen h-32 p-10 flex justify-start items-center border-b-4 border-transparent z-10"
             initial="hidden"
             animate="visible"
             variants={navbarVariants}

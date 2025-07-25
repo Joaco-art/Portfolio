@@ -10,7 +10,7 @@ export default function App() {
   return (
     <>
 
-    <div className='bg-gradient-to-r from-[#0f172a]  to-[#334155]'>
+    <div className='bg-black'>
 
         <Navbar name = "Joaquín Farias Ovelar" atr = "Projects" atrr = "Services" atrrr = "About" atrrrr = "Contact" />
       

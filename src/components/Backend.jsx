@@ -81,7 +81,7 @@ export default function Backend() {
                             animate={
                                 hoveredIndex === index
                                 ? { scale: 1.5 } // en hover: hacer scale
-                                : { y: [0, -10, 0] } // sin hover: flotación
+                                : { y: [0, -30, 0] } // sin hover: flotación
                             }
                             transition={{
                                 duration: hoveredIndex === index ? 0.1 : 0.5,

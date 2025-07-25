@@ -8,7 +8,7 @@ import tailwindcssSvg from '../assets/tailwindcss-icon-svgrepo-com.svg';
 import astroSvg from '../assets/astro-svgrepo-com.svg';
 import figmaSvg from '../assets/figma-svgrepo-com.svg';
 
-export default function Backend() {
+export default function Frontend() {
     const skills = [
     {
         type: 'React',
@@ -60,7 +60,7 @@ export default function Backend() {
     return (
         <section className="relative flex flex-col items-center justify-center snap-start w-full h-screen overflow-hidden">
             <motion.div
-                initial={{ opacity: 0, y: 300, x: 500 }}
+                initial={{ opacity: 0, y: 300, x: -500 }}
                 whileInView={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
@@ -81,7 +81,7 @@ export default function Backend() {
                             animate={
                                 hoveredIndex === index
                                 ? { scale: 1.5 } // en hover: hacer scale
-                                : { y: [0, -10, 0] } // sin hover: flotación
+                                : { y: [0, -30, 0] } // sin hover: flotación
                             }
                             transition={{
                                 duration: hoveredIndex === index ? 0.1 : 0.5,
