@@ -4,19 +4,21 @@
 export default function Projects() {
     return (
         <section className="flex flex-col items-center justify-center snap-start w-screen px-10 py-32 h-screen overflow-hidden">
-            <h2 className="text-6xl font-bold text-center">Projects</h2>
+            <h2 className="text-6xl font-bold text-center">My Projects</h2>
 
             <div className="flex flex-row w-[80%] h-[75%]  mt-32  rounded-xl border-2 border-gray-800 ">
 
-                <div className="flex flex-col justify-start p-5 gap-10 w-[50%] h-full border-r-2 border-gray-700">
+                <div className="relative flex flex-col justify-start p-5 gap-10 w-[50%] h-full border-r-2 border-gray-700">
                 <h3 className="text-5xl font-bold text-center mt-10">Project 1</h3>
                 <p className="text-lg">
-                    I am a software engineer with a passion for building web applications.
+                    - I am a software engineer with a passion for building web applications.
                 </p>
                 <p className="text-lg">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                    - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
                 </p>
-                <p className="mt-auto">Arrows</p>
+                <p className="absolute bottom-5 left-5">Arrows</p>
+
+                <p className="absolute bottom-5 right-5">Arrows</p>
                 </div>
 
                 <div className="flex flex-col justify-start p-5 gap-10 w-[50%] h-full bg-gray-950">

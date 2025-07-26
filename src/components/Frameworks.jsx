@@ -70,7 +70,7 @@ export default function Frameworks() {
                     Frameworks
                 </h2>
 
-                <div className="flex justify-center p-5 items-center gap-20 mt-20 z-10 relative flex-wrap">
+                <div className="flex justify-center p-5 items-center gap-20 mt-20 z-10  flex-wrap">
                     {skills.map((skill, index) => (
                         <motion.img
                             key={index}

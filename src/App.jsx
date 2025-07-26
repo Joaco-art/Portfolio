@@ -2,8 +2,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Frameworks from './components/Frameworks'
-import About from './About'
-import Projects from './Projects'
+import About from './components/About'
+import Projects from './components/Projects'
 import './App.css'
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
 
-    <div className='bg-black'>
+    <div className='bg-gradient-to-r from-black via-gray-950 to-black'>
 
         <Navbar name = "Joaquín Farias Ovelar" atr = "About" atrr = "Services" atrrr = "Projects" atrrrr = "Contact" />
       

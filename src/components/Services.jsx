@@ -18,7 +18,7 @@ function Services() {
 
         <h2 className="text-6xl font-bold text-center animated-gradient-text">My Services</h2>
 
-        <div className="flex flex-row w-full p-5 items-center gap-10 mt-10">
+        <div className="flex flex-row flex-wrap w-full h-auto p-5 items-center justify-center gap-5 mt-10">
 
             <Card type="Web Development" desc="Creating responsive and modern websites using the latest technologies." />
             <Card type="UI/UX Design" desc="Designing user-friendly interfaces and experiences that enhance user satisfaction." />

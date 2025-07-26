@@ -29,7 +29,7 @@ function Hero() {
     return (
         <motion.section
             ref={ref}
-            className="flex flex-row snap-start h-screen w-screen overflow-hidden justify-center items-center p-10"
+            className="relative flex flex-row snap-start h-screen w-screen overflow-hidden justify-center items-center p-10"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -79,7 +79,7 @@ function Hero() {
                                 <motion.img 
                                     src={Avatar} 
                                     alt="Avatar" 
-                                    className="absolute bottom-0 right-10 z-0"
+                                    className="absolute bottom-0 right-10 z-0 w-1/2 h-auto"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
