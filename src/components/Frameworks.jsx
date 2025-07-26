@@ -58,7 +58,7 @@ export default function Frameworks() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <section className="relative flex flex-col items-center justify-center snap-start w-full h-screen overflow-hidden">
+        <section className="relative flex flex-col items-center lg:justify-center justify-start lg:snap-start w-full h-screen overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 300, x: -500 }}
                 whileInView={{ opacity: 1, y: 0, x: 0 }}
@@ -94,7 +94,7 @@ export default function Frameworks() {
                     ))}
                 </div>
 
-                <div className="absolute top-10/12 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 pointer-events-none p-5 z-20">
+                <div className="absolute lg:top-10/12 bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 pointer-events-none lg:p-5 z-20">
                     {hoveredIndex !== null && (
                         <SkillsCard
                             type={skills[hoveredIndex].type}

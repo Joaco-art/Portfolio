@@ -15,7 +15,7 @@ export default function App() {
 
         <Navbar name = "Joaquín Farias Ovelar" atr = "About" atrr = "Services" atrrr = "Projects" atrrrr = "Contact" />
       
-      <main className='h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth'>
+      <main className='h-screen lg:overflow-y-scroll lg:snap-y lg:snap-mandatory lg:scroll-smooth'>
         <Hero />
         <About />
         <Services />

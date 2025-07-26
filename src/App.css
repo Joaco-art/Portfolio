@@ -2,9 +2,9 @@
 
 @theme {
     --color-text: #ffffff;
-    --color-background: #000000;
-    --color-primary: #0012ff;
-    --color-secondary: #a33c3c;
-    --color-accent: #00fff0;
+    --color-gradient: #091a26;
+    --color-primary: #3db2ff;
+    --color-secondary: #538a9b;
+    --color-accent: #007dff;
     
   }

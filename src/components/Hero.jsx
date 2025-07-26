@@ -29,7 +29,7 @@ function Hero() {
     return (
         <motion.section
             ref={ref}
-            className="relative flex flex-row snap-start h-screen w-screen overflow-hidden justify-center items-center p-10"
+            className="relative flex lg:flex-row flex-col snap-start lg:h-screen h-auto w-screen overflow-hidden justify-center items-center p-10"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -55,10 +55,10 @@ function Hero() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consectetur dignissimos beatae optio accusamus magni ducimus modi soluta maxime! Hic nobis sunt excepturi eos molestiae similique cumque nam consequuntur pariatur.
                     </motion.p>
                     <motion.div className="flex flex-row gap-4 text-lg text-gray-300 mb-8" variants={childVariants}>
-                        <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
+                        <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition duration-300">
                             View Projects
                         </button>
-                        <button className="px-6 py-3 bg-transparent border-4 border-white text-white rounded-lg hover:bg-blue-700 transition duration-500 hover:scale-105">
+                        <button className="px-6 py-3 bg-transparent border-4 border-white text-white rounded-lg hover:bg-accent transition duration-500">
                             Download CV
                         </button>
                     </motion.div>

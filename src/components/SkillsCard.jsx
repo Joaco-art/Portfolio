@@ -19,7 +19,7 @@ export default function SkillsCard({ type, status, desc, color }) {
     const width = getProgressWidth(status);
 
     return (
-        <div className="bg-gray-800 p-6 rounded-xl shadow-lg w-xl">
+        <div className="bg-gray-800 p-6 rounded-xl shadow-lg w-auto h-auto">
             <h3 className="text-4xl font-bold mb-2">{type}</h3>
             <p className="text-xl font-medium text-gray-300 mb-2">{status}</p>
 
