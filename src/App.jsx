@@ -1,8 +1,9 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
-import Frontend from './components/Frontend'
-import Backend from './components/Backend'
+import Frameworks from './components/Frameworks'
+import About from './About'
+import Projects from './Projects'
 import './App.css'
 
 export default function App() {
@@ -12,13 +13,14 @@ export default function App() {
 
     <div className='bg-black'>
 
-        <Navbar name = "Joaquín Farias Ovelar" atr = "Projects" atrr = "Services" atrrr = "About" atrrrr = "Contact" />
+        <Navbar name = "Joaquín Farias Ovelar" atr = "About" atrr = "Services" atrrr = "Projects" atrrrr = "Contact" />
       
       <main className='h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth'>
         <Hero />
+        <About />
         <Services />
-        <Frontend />
-        <Backend />
+        <Frameworks />
+        <Projects />
       </main>
 
     </div>

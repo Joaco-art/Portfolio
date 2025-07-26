@@ -27,11 +27,11 @@ function Navbar(navbarProps) {
                 transition={{ duration: 5, ease: "easeInOut", }}
             />
             <ul className="flex w-screen gap-5 text-xl z-10">
-                <li className="mr-auto ml-10">{navbarProps.name}</li>
-                <li>{navbarProps.atr}</li>
-                <li>{navbarProps.atrr}</li>
-                <li>{navbarProps.atrrr}</li>
-                <li className="mr-10">{navbarProps.atrrrr}</li>
+                <li className="mr-auto ml-10 cursor-pointer">{navbarProps.name}</li>
+                <li className="hover:underline duration-300 cursor-pointer">{navbarProps.atr}</li>
+                <li className="hover:underline duration-300 cursor-pointer">{navbarProps.atrr}</li>
+                <li className="hover:underline duration-300 cursor-pointer">{navbarProps.atrrr}</li>
+                <li className="mr-10 hover:underline duration-300 cursor-pointer">{navbarProps.atrrrr}</li>
             </ul>
         </motion.nav>
     );

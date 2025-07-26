@@ -90,6 +90,14 @@ body {
     opacity: 0;
   }
 }
+@theme {
+  --color-text: #ffffff;
+  --color-background: #000000;
+  --color-primary: #0012ff;
+  --color-secondary: #a33c3c;
+  --color-accent: #00fff0;
+  
+}
 
 
 

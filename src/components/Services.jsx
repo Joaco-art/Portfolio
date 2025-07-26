@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function Services() {
     return (
 
-      <section className="flex flex-col snap-start h-screen gap-40 items-center justify-center w-screen overflow-hidden">
+      <section className="flex flex-col snap-start h-screen items-center justify-center w-screen overflow-hidden">
         <motion.div
         initial={{ opacity: 0, y: 200, scale: 0.8 }}
         whileInView={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 }  }}

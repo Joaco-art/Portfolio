@@ -8,7 +8,7 @@ import tailwindcssSvg from '../assets/tailwindcss-icon-svgrepo-com.svg';
 import astroSvg from '../assets/astro-svgrepo-com.svg';
 import figmaSvg from '../assets/figma-svgrepo-com.svg';
 
-export default function Backend() {
+export default function Frameworks() {
     const skills = [
     {
         type: 'React',
@@ -60,14 +60,14 @@ export default function Backend() {
     return (
         <section className="relative flex flex-col items-center justify-center snap-start w-full h-screen overflow-hidden">
             <motion.div
-                initial={{ opacity: 0, y: 300, x: 500 }}
+                initial={{ opacity: 0, y: 300, x: -500 }}
                 whileInView={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="text-white text-3xl"
             >
                 <h2 className="text-6xl font-bold text-white text-center pt-10">
-                    Frameworks: <u>Backend</u>
+                    Frameworks
                 </h2>
 
                 <div className="flex justify-center p-5 items-center gap-20 mt-20 z-10 relative flex-wrap">

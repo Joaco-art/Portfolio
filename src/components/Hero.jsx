@@ -22,14 +22,14 @@ function Hero() {
     };
 
     const childVariants = {
-        hidden: { scale: 3, opacity: 0 },
+        hidden: { scale: 1.5, opacity: 0 },
         visible: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
     };
 
     return (
         <motion.section
             ref={ref}
-            className="flex flex-row snap-start h-[90%] w-screen overflow-hidden justify-center items-center p-10"
+            className="flex flex-row snap-start h-screen w-screen overflow-hidden justify-center items-center p-10"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
