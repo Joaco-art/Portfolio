@@ -1,96 +1,49 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+// import { useRef } from "react";
 import Avatar from '../assets/peeps-avatar-alpha.png';
-import { AnimatePresence } from "framer-motion";
+import Socials from "./Socials";
 
 function Hero() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { amount: 0.5 });
-
-    const containerVariants = {
-        hidden: { scale: 10, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                duration: 0.3,
-                ease: "easeOut",
-                when: "beforeChildren",
-                staggerChildren: 0.2,
-            },
-        },
-    };
-
-    const childVariants = {
-        hidden: { scale: 1.5, opacity: 0 },
-        visible: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
-    };
-
     return (
-        <motion.section
-            ref={ref}
-            className="relative flex lg:flex-row flex-col snap-start lg:h-screen h-auto w-screen overflow-hidden justify-center items-center p-10"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+        <section
+            className="relative flex flex-col min-h-screen w-screen overflow-hidden justify-center items-center p-4 md:p-10 bg-transparent"
         >
-            <motion.div
-                className="flex flex-col items-center justify-center h-[90%] w-[50%]"
-                variants={childVariants}
-            >
-                <motion.div
-                    className="flex flex-col gap-5 p-8 mt-32 rounded-lg"
-                    variants={childVariants}
-                >
-                    <motion.p className="text-lg font-semibold" variants={childVariants}>
-                        Welcome to my portfolio!
-                    </motion.p>
-                    <motion.h1 className="text-7xl font-bold text-white mb-4" variants={childVariants}>
-                        Joaquín Farias Ovelar
-                    </motion.h1>
-                    <motion.p className="text-4xl font-bold animated-gradient-text pb-4" variants={childVariants}>
-                        Software Engineer & UI/UX Designer
-                    </motion.p>
-                    <motion.p className="text-xl max-w-[75ch] mb-10" variants={childVariants}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consectetur dignissimos beatae optio accusamus magni ducimus modi soluta maxime! Hic nobis sunt excepturi eos molestiae similique cumque nam consequuntur pariatur.
-                    </motion.p>
-                    <motion.div className="flex flex-row gap-4 text-lg text-gray-300 mb-8" variants={childVariants}>
-                        <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition duration-300">
-                            View Projects
-                        </button>
-                        <button className="px-6 py-3 bg-transparent border-4 border-white text-white rounded-lg hover:bg-accent transition duration-500">
-                            Download CV
-                        </button>
-                    </motion.div>
-                </motion.div>
-            </motion.div>
+            <div className="flex flex-col items-center justify-center w-full max-w-4xl h-auto gap-5 p-4 md:p-8 rounded-lg flex-1">
+                <p className="lg:text-lg text-base font-semibold">
+                    Welcome to my portfolio!
+                </p>
+                <h1 className="lg:text-7xl text-3xl font-bold text-white mb-4">
+                    Joaquín Farias Ovelar
+                </h1>
+                <p className="lg:text-4xl text-2xl font-bold animated-gradient-text pb-4">
+                    Software Engineer & UI/UX Designer
+                </p>
+                <p className="lg:text-xl text-base max-w-[75ch] mb-10">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consectetur dignissimos beatae optio accusamus magni ducimus modi soluta maxime! Hic nobis sunt excepturi eos molestiae similique cumque nam consequuntur pariatur.
+                </p>
+                <div className="flex flex-row gap-4 lg:text-lg text-small text-gray-300 mb-8">
+                    <button className="px-6 md:py-3 py-1 bg-primary text-white rounded-lg hover:bg-secondary transition duration-300">
+                        View Projects
+                    </button>
+                    <button className="md:px-6 px-4 md:py-3 py-1 bg-transparent border-4 border-white text-white rounded-lg hover:bg-accent transition duration-500">
+                        Download CV
+                    </button>
+                </div>
+                <div className="w-full flex justify-center">
+                    <Socials/>
+                </div>
+            </div>
 
-            <motion.div
-                className="flex flex-col items-center justify-center h-[90%] w-[50%]"
-                variants={childVariants}
-            >
-                <motion.div
-                    className="p-8 m-20 rounded-lg"
-                    variants={childVariants}
-                >
-                    <p className="text-lg">
-                        <AnimatePresence>
-                            {isInView && (
-                                <motion.img 
-                                    src={Avatar} 
-                                    alt="Avatar" 
-                                    className="absolute bottom-0 right-10 z-0 w-1/2 h-auto"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.2 }}
-                                />
-                            )}
-                        </AnimatePresence>
-                    </p>
-                </motion.div>
-            </motion.div>
-        </motion.section>
+            <div className="flex flex-col items-center justify-center w-full max-w-4xl h-auto relative mt-8 md:mt-0 flex-1">
+                <div className="w-full h-full flex items-end justify-center relative">
+                    <img 
+                        src={Avatar} 
+                        alt="Avatar" 
+                        className="w-3/4 md:w-2/3 lg:w-1/2 h-auto max-h-[60vh] md:max-h-[70vh] object-contain"
+                        style={{objectFit: 'contain'}}
+                    />
+                </div>
+            </div>
+        </section>
     );
 }
 

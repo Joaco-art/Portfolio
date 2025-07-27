@@ -4,6 +4,7 @@ import Services from './components/Services'
 import Frameworks from './components/Frameworks'
 import About from './components/About'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 import './App.css'
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         <Services />
         <Frameworks />
         <Projects />
+        <Contact />
       </main>
 
     </div>
