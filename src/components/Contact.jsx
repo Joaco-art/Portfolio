@@ -56,7 +56,7 @@ export default function Contact() {
     };
 
     return (
-        <section className='flex flex-col snap-start items-center justify-center h-auto w-screen gap-10 px-5 py-0'>
+        <section className='relative flex flex-col snap-start items-center justify-center h-auto w-screen gap-10 px-5 py-0 p-4 md:p-10'>
             <h3 className='text-4xl font-bold text-primary drop-shadow-lg'>Do you want to work with me?</h3>
             <p className='text-lg text-gray-300 max-w-2xl text-center'>Are you seeking for a developer? I'm always looking for new projects and collaborations. If you have an idea or project in mind, feel free to contact me.</p>
 
@@ -124,8 +124,9 @@ export default function Contact() {
                 <button type="submit" className='mt-4 px-8 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-secondary transition-all duration-200'>Send request</button>
             </form>
 
-            <p>Anyway, If you feel more comfortable, you can contact me through my email: <a href="mailto:juan.garcia.dev@gmail.com" className="text-accent underline">juan.garcia.dev@gmail.com</a></p>
-            <Socials />
+            <p className="md:text-center text-pretty text-sm">Anyway, If you feel more comfortable, you can contact me through my email: <a href="mailto:juan.garcia.dev@gmail.com" className="text-accent underline">juan.garcia.dev@gmail.com</a></p>
+            <p className="absolute bottom-0 text-center text-xs">This proyect is hereby subjected to MIT license. &#169; 2025 Joaquín Farias Ovelar. </p>
+
 
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50 transition-opacity duration-300">

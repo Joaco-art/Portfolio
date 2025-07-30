@@ -3,8 +3,7 @@ import { SiUpwork } from "react-icons/si";
 
 export default function Socials() {
     return (
-        <section className="flex flex-col snap-start items-center justify-center h-auto w-screen gap-10 px-5 py-0">
-            <div className="flex flex-row gap-6 text-3xl">
+            <div className="flex flex-row md:gap-6 gap-4 text-xl md:text-4xl">
                 <a href="https://www.linkedin.com/in/juan-garcia-dev/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" title="LinkedIn">
                     <FaLinkedin />
                 </a>
@@ -21,6 +20,5 @@ export default function Socials() {
                     <SiUpwork />
                 </a>
             </div>
-        </section>
     )
 }

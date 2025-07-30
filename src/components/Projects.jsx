@@ -3,8 +3,7 @@
 
 export default function Projects() {
     return (
-        <section className="flex flex-col items-center justify-center lg:snap-start w-screen px-10 py-32 h-screen overflow-hidden">
-            <h2 className="text-6xl font-bold text-center">My Projects</h2>
+        <section className="flex flex-col items-center justify-center lg:snap-start w-screen px-10 py-32 md:h-screen h-auto overflow-hidden p-4 md:p-10">
 
             <div className="flex flex-row w-[80%] h-[75%]  mt-32  rounded-xl border-2 border-gray-800 ">
 

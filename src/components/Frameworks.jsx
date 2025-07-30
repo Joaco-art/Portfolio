@@ -58,7 +58,7 @@ export default function Frameworks() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <section className="relative flex flex-col items-center lg:justify-center justify-start lg:snap-start w-full h-screen overflow-hidden">
+        <section className="relative flex flex-col items-center lg:justify-center justify-start lg:snap-start w-full md:h-screen h-auto overflow-hidden p-4 md:p-10">
             <motion.div
                 initial={{ opacity: 0, y: 300, x: -500 }}
                 whileInView={{ opacity: 1, y: 0, x: 0 }}
