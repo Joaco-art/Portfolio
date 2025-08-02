@@ -15,6 +15,16 @@ function Navbar(navbarProps) {
         }
     };
 
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <motion.nav
             className="fixed bg-black w-screen h-32 md:p-10 p-5 flex justify-center items-center border-b-4 border-transparent z-10"
@@ -29,7 +39,7 @@ function Navbar(navbarProps) {
                 transition={{ duration: 5, ease: "easeInOut", }}
             />
             <ul className="relative flex w-screen gap-5 text-xl z-10 items-center">
-                <li className="mr-auto ml-10 cursor-pointer">
+                <li className="mr-auto ml-10 cursor-pointer" onClick={() => scrollToSection('hero')}>
                     <span className="hidden md:inline">{navbarProps.name}</span>
                     <span className="md:hidden">Joaco</span>
                 </li>
@@ -50,10 +60,38 @@ function Navbar(navbarProps) {
 
                 {/* Menú normal en md+ */}
                 <div className="md:flex md:flex-row hidden absolute right-0 gap-10 h-full">
-                    <li className="hover:underline duration-300 cursor-pointer">{navbarProps.atr}</li>
-                    <li className="hover:underline duration-300 cursor-pointer">{navbarProps.atrr}</li>
-                    <li className="hover:underline duration-300 cursor-pointer">{navbarProps.atrrr}</li>
-                    <li className="mr-10 hover:underline duration-300 cursor-pointer">{navbarProps.atrrrr}</li>
+                    <li className="relative group cursor-pointer" onClick={() => scrollToSection('about')}>
+                        <span className="relative z-10 group-hover:text-primary transition-colors duration-300">{navbarProps.atr}</span>
+                        <motion.div 
+                            className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300 ease-out"
+                            initial={{ width: 0 }}
+                            whileHover={{ width: "100%" }}
+                        />
+                    </li>
+                    <li className="relative group cursor-pointer" onClick={() => scrollToSection('services')}>
+                        <span className="relative z-10 group-hover:text-primary transition-colors duration-300">{navbarProps.atrr}</span>
+                        <motion.div 
+                            className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300 ease-out"
+                            initial={{ width: 0 }}
+                            whileHover={{ width: "100%" }}
+                        />
+                    </li>
+                    <li className="relative group cursor-pointer" onClick={() => scrollToSection('projects')}>
+                        <span className="relative z-10 group-hover:text-primary transition-colors duration-300">{navbarProps.atrrr}</span>
+                        <motion.div 
+                            className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300 ease-out"
+                            initial={{ width: 0 }}
+                            whileHover={{ width: "100%" }}
+                        />
+                    </li>
+                    <li className="relative group cursor-pointer mr-10" onClick={() => scrollToSection('contact')}>
+                        <span className="relative z-10 group-hover:text-primary transition-colors duration-300">{navbarProps.atrrrr}</span>
+                        <motion.div 
+                            className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300 ease-out"
+                            initial={{ width: 0 }}
+                            whileHover={{ width: "100%" }}
+                        />
+                    </li>
                 </div>
 
                 {/* Overlay menú mobile */}
@@ -66,10 +104,10 @@ function Navbar(navbarProps) {
                         >
                             &times;
                         </button>
-                        <li className="hover:underline duration-300 cursor-pointer text-white text-2xl" onClick={() => setMenuOpen(false)}>{navbarProps.atr}</li>
-                        <li className="hover:underline duration-300 cursor-pointer text-white text-2xl" onClick={() => setMenuOpen(false)}>{navbarProps.atrr}</li>
-                        <li className="hover:underline duration-300 cursor-pointer text-white text-2xl" onClick={() => setMenuOpen(false)}>{navbarProps.atrrr}</li>
-                        <li className="hover:underline duration-300 cursor-pointer text-white text-2xl" onClick={() => setMenuOpen(false)}>{navbarProps.atrrrr}</li>
+                        <li className="hover:underline duration-300 cursor-pointer text-white text-2xl" onClick={() => { scrollToSection('about'); setMenuOpen(false); }}>{navbarProps.atr}</li>
+                        <li className="hover:underline duration-300 cursor-pointer text-white text-2xl" onClick={() => { scrollToSection('services'); setMenuOpen(false); }}>{navbarProps.atrr}</li>
+                        <li className="hover:underline duration-300 cursor-pointer text-white text-2xl" onClick={() => { scrollToSection('projects'); setMenuOpen(false); }}>{navbarProps.atrrr}</li>
+                        <li className="hover:underline duration-300 cursor-pointer text-white text-2xl" onClick={() => { scrollToSection('contact'); setMenuOpen(false); }}>{navbarProps.atrrrr}</li>
                     </div>
                 )}
             </ul>

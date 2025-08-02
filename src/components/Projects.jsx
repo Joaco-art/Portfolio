@@ -1,9 +1,9 @@
-
-
+import { useRef, useEffect } from "react";
+import { useGSAPAnimations } from '../hooks/useGSAPAnimations';
 
 export default function Projects() {
     return (
-        <section className="flex flex-col items-center justify-center lg:snap-start w-screen px-10 py-32 md:h-screen h-auto overflow-hidden p-4 md:p-10">
+        <section id="projects" className="flex flex-col items-center justify-center lg:snap-start w-screen px-10 py-32 md:h-screen h-auto overflow-hidden p-4 md:p-10">
 
             <div className="flex flex-row w-[80%] h-[75%]  mt-32  rounded-xl border-2 border-gray-800 ">
 

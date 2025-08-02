@@ -56,7 +56,7 @@ export default function Contact() {
     };
 
     return (
-        <section className='relative flex flex-col snap-start items-center justify-center h-auto w-screen gap-10 px-5 py-0 p-4 md:p-10'>
+        <section id="contact" className='relative flex flex-col snap-start items-center justify-center h-auto w-screen gap-10 px-5 py-0 p-4 md:p-10'>
             <h3 className='text-4xl font-bold text-primary drop-shadow-lg'>Do you want to work with me?</h3>
             <p className='text-lg text-gray-300 max-w-2xl text-center'>Are you seeking for a developer? I'm always looking for new projects and collaborations. If you have an idea or project in mind, feel free to contact me.</p>
 
@@ -107,10 +107,10 @@ export default function Contact() {
 
                 <div className="w-full flex flex-col gap-1">
                     <textarea
-                        maxLength={200}
                         id="message"
-                        placeholder='Write your message here (max 200 characters)'
-                        className={`p-4 rounded-md text-text bg-gray-900 w-full min-h-[120px] transition-all duration-200 placeholder:text-gray-400 resize-none ${getInputClass('message')}`}
+                        placeholder='Message'
+                        rows="5"
+                        className={`rounded-md text-text bg-gray-900 w-full p-4 transition-all duration-200 placeholder:text-gray-400 resize-none ${getInputClass('message')}`}
                         required
                         value={fields.message}
                         onChange={handleChange}
@@ -121,7 +121,12 @@ export default function Contact() {
                     )}
                 </div>
 
-                <button type="submit" className='mt-4 px-8 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-secondary transition-all duration-200'>Send request</button>
+                <button
+                    type="submit"
+                    className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-secondary transition duration-300 font-semibold"
+                >
+                    Send Request
+                </button>
             </form>
 
             <p className="md:text-center text-pretty text-sm">Anyway, If you feel more comfortable, you can contact me through my email: <a href="mailto:juan.garcia.dev@gmail.com" className="text-accent underline">juan.garcia.dev@gmail.com</a></p>
@@ -129,19 +134,18 @@ export default function Contact() {
 
 
             {showModal && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50 transition-opacity duration-300">
-                    <div className="bg-gray-900 rounded-xl p-8 shadow-2xl flex flex-col items-center gap-4 border-2 border-accent scale-100 opacity-100 transition-all duration-300">
-                        <span className="text-2xl font-bold text-accent mb-2">The form has been sent successfully!</span>
-                        {sentData && (
-                            <div className="bg-gray-800 rounded-lg p-4 w-full text-left text-white text-base flex flex-col gap-2">
-                                <div><span className="font-semibold">First Name:</span> {sentData.firstname}</div>
-                                <div><span className="font-semibold">Email:</span> {sentData.email}</div>
-                                <div><span className="font-semibold">Message:</span> {sentData.message}</div>
-                            </div>
-                        )}
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-8 rounded-lg max-w-lg w-full mx-4">
+                        <h3 className="text-2xl font-bold text-primary mb-4">Message Sent!</h3>
+                        <p className="text-white mb-4">Thank you for your message. I'll get back to you soon!</p>
+                        <div className="bg-gray-800 p-4 rounded-lg mb-4">
+                            <p className="text-gray-300"><strong>Name:</strong> {sentData.firstname}</p>
+                            <p className="text-gray-300"><strong>Email:</strong> {sentData.email}</p>
+                            <p className="text-gray-300"><strong>Message:</strong> {sentData.message}</p>
+                        </div>
                         <button
-                            className="mt-2 px-6 py-2 bg-accent text-white rounded-lg font-semibold hover:bg-accent/80 transition-all"
                             onClick={() => setShowModal(false)}
+                            className="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-secondary transition duration-300"
                         >
                             Close
                         </button>
@@ -149,5 +153,5 @@ export default function Contact() {
                 </div>
             )}
         </section>
-    )
+    );
 }

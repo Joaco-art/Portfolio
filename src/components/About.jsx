@@ -1,8 +1,6 @@
-
-
 export default function About() {
     return (
-        <section className="flex flex-col items-center justify-center lg:snap-start w-screen md:h-screen h-auto overflow-hidden p-0 md:p-10">
+        <section id="about" className="flex flex-col items-center justify-center lg:snap-start w-screen md:h-screen h-auto overflow-hidden p-0 md:p-10">
 
             <div className="flex lg:flex-row flex-col items-center justify-center w-[80%] lg:h-[60%] h-auto bg-radial from-black  to-gray-950 rounded-xl md:mt-20 mt-10 shadow-2xl border-2 border-primary">
               
