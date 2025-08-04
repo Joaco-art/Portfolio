@@ -1,9 +1,11 @@
 {
-  "name": "my-react-tailwind-project",
+  "name": "Joaquin Farias Ovelar Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Joaco-art.github.io/Portfolio",
   "scripts": {
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
